@@ -2,6 +2,8 @@
 
 # ◈ Asterism
 
+**a map of your infrastructure that nobody asked for**
+
 **one html file. a folder of markdown. a graph that glows.**
 
 no server · no database · no install · no login screen · no regrets
