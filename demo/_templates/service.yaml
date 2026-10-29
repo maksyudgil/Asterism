@@ -1,0 +1,19 @@
+# Template "Service". Edit in the app (Settings) or by hand.
+name: Service
+prefix: svc
+icon: ⚙️
+color: '#22c55e'
+fields:
+  - {label: Hosting, type: select, required: true, options: [Cloud (SaaS), On-premises, Vendor-hosted]}
+  - {label: URL, type: url}
+  - {label: Criticality, type: select, options: [Low, Medium, High, Critical]}
+  - {label: Status, type: select, options: [Active, Spare, Retired]}
+  - {label: Business owner, type: ref, relation: business_owner, target: person}
+  - {label: Technical owner, type: ref, relation: technical_owner, target: person}
+  - {label: Vendor, type: ref, relation: supported_by, target: vendor, multiple: false}
+  - {label: Runs on, type: ref, relation: runs_on, target: server}
+  - {label: License, type: ref, relation: licensed_by, target: license}
+  - {label: SLA, type: boolean}
+  - {label: SLA details, type: multiline}
+relations:
+  - {type: depends_on, target: service}

@@ -1,0 +1,9 @@
+# Template "Location". Edit in the app (Settings) or by hand.
+name: Location
+prefix: loc
+icon: 📍
+color: '#94a3b8'
+fields:
+  - {label: Address, type: multiline}
+  - {label: Floor / room}
+  - {label: Part of, type: ref, relation: located_in, target: location, multiple: false}

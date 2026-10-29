@@ -1,0 +1,17 @@
+# Template "Firewall". Edit in the app (Settings) or by hand.
+name: Firewall
+prefix: fw
+icon: 🛡️
+color: '#ef4444'
+fields:
+  - {label: Hostname, unique: warn, reset_on_copy: true}
+  - {label: IP Address, type: ip, unique: warn, reset_on_copy: true}
+  - {label: Serial/MAC, unique: strict, reset_on_copy: true}
+  - {label: Model}
+  - {label: Firmware}
+  - {label: Status, type: select, options: [Active, Spare, Retired]}
+  - {label: Technical owner, type: ref, relation: technical_owner, target: person}
+  - {label: Location, type: ref, relation: located_in, target: location, multiple: false}
+  - {label: Vendor, type: ref, relation: supported_by, target: vendor, multiple: false}
+  - {label: Purchase date, type: date}
+  - {label: Warranty until, type: date}

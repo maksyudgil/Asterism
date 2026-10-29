@@ -1,0 +1,12 @@
+# Template "License". Edit in the app (Settings) or by hand.
+name: License
+prefix: lic
+icon: 🔑
+color: '#eab308'
+fields:
+  - {label: Product}
+  - {label: Quantity, type: number}
+  - {label: Renewal date, type: date}
+  - {label: Cost / year}
+  - {label: Contract number}
+  - {label: Vendor, type: ref, relation: supported_by, target: vendor, multiple: false}

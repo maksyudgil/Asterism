@@ -1,0 +1,12 @@
+# Template "Business process". Edit in the app (Settings) or by hand.
+name: Business process
+prefix: bp
+icon: 💼
+color: '#f59e0b'
+fields:
+  - {label: Description, type: multiline}
+  - {label: Criticality, type: select, options: [Low, Medium, High, Critical]}
+  - {label: Business owner, type: ref, relation: business_owner, target: person}
+  - {label: Services, type: ref, relation: uses, target: service}
+  - {label: RTO}
+  - {label: RPO}

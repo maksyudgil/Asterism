@@ -1,0 +1,13 @@
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const lc = s => String(s ?? '').trim().toLowerCase();
+const pad = n => String(n).padStart(2, '0');
+const nowStamp = (d = new Date()) => `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}T${pad(d.getHours())}:${pad(d.getMinutes())}:${pad(d.getSeconds())}`;
+const fileStamp = d => nowStamp(d).replace(/:/g, '-');
+const fmtStamp = s => String(s || '').replace(/^(\d{4}-\d\d-\d\d)T(\d\d)[-:](\d\d)[-:](\d\d).*$/, '$1 $2:$3:$4');
+const escRe = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+const clone = o => JSON.parse(JSON.stringify(o));
+const PALETTE = ['#7aa2f7', '#f7768e', '#9ece6a', '#e0af68', '#bb9af7', '#7dcfff', '#ff9e64', '#73daca', '#f4b8e4', '#c3e88d', '#89ddff', '#ffcb6b', '#c792ea', '#82aaff', '#ff5370', '#b2ccd6'];
+const FIELD_TYPE_LABELS = { text: 'Text', multiline: 'Multi-line text', ip: 'IP address', url: 'URL', date: 'Date', number: 'Number', select: 'Dropdown', boolean: 'Yes / No', ref: 'Reference (object)' };
+const IGNORED_FILE = n => n.startsWith('.') || n.startsWith('~$') || /\.crswap$/i.test(n);

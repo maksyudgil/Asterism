@@ -1,0 +1,13 @@
+# Template "Vendor". Edit in the app (Settings) or by hand.
+name: Vendor
+prefix: ven
+icon: 🏢
+color: '#ec4899'
+fields:
+  - {label: Registry code, unique: strict, reset_on_copy: true}
+  - {label: Website, type: url}
+  - {label: Support phone}
+  - {label: Support email}
+  - {label: Contract number, unique: warn, reset_on_copy: true}
+  - {label: Contract until, type: date}
+  - {label: Contact person, type: ref, relation: contact, target: person}

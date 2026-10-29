@@ -1,0 +1,12 @@
+# Relation types: key: {label (outgoing), inverse (incoming), color, category}
+connected_to: {label: Connected to, inverse: Connected devices, color: '#e5484d', category: Technical}
+runs_on: {label: Runs on, inverse: Hosts, color: '#f76b15', category: Technical}
+depends_on: {label: Depends on, inverse: Required by, color: '#f5d90a', category: Dependency}
+uses: {label: Uses, inverse: Used by, color: '#12a594', category: Dependency}
+supported_by: {label: Supported by, inverse: Supports, color: '#3e9bff', category: Reference}
+contact: {label: Contact person, inverse: Contact for, color: '#30a46c', category: Link}
+business_owner: {label: Business owner, inverse: Business owner of, color: '#8e4ec6', category: Reference}
+technical_owner: {label: Technical owner, inverse: Technical owner of, color: '#c084fc', category: Reference}
+linked_with: {label: Linked with, inverse: Linked with, color: '#46a758', category: Link}
+licensed_by: {label: Licensed by, inverse: License for, color: '#d6409f', category: Financial}
+located_in: {label: Located in, inverse: Location of, color: '#8b8d98', category: Reference}

@@ -1,0 +1,9 @@
+# Template "Person". Edit in the app (Settings) or by hand.
+name: Person
+prefix: per
+icon: 👤
+color: '#a3e635'
+fields:
+  - {label: Role}
+  - {label: Email, unique: warn, reset_on_copy: true}
+  - {label: Phone, reset_on_copy: true}

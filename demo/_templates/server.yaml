@@ -1,0 +1,19 @@
+# Template "Server". Edit in the app (Settings) or by hand.
+name: Server
+prefix: srv
+icon: 🖥️
+color: '#8b5cf6'
+fields:
+  - {label: Hostname, unique: warn, reset_on_copy: true}
+  - {label: IP Address, type: ip, unique: warn, reset_on_copy: true}
+  - {label: Serial/MAC, unique: strict, reset_on_copy: true}
+  - {label: Kind, type: select, options: [Physical, Virtual]}
+  - {label: OS}
+  - {label: CPU / RAM}
+  - {label: Status, type: select, options: [Active, Spare, Retired]}
+  - {label: Criticality, type: select, options: [Low, Medium, High, Critical]}
+  - {label: Technical owner, type: ref, relation: technical_owner, target: person}
+  - {label: Runs on, type: ref, relation: runs_on, target: server, multiple: false}
+  - {label: Location, type: ref, relation: located_in, target: location, multiple: false}
+relations:
+  - {type: connected_to, target: switch}
